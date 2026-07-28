@@ -102,11 +102,11 @@ class GUI:
                     task.complete()
                     todo.update_task(task)
                 else:
-                    un_complete_lable = tk.Label(self.all_tasks_window, text="Task uncompleted",font=("Times New Roman", 20),bg="Dimgrey", fg="White")
+                    un_complete_lable = tk.Label(self.all_tasks_window, text="Task is Incomplete",font=("Times New Roman", 20),bg="Dimgrey", fg="White")
                     un_complete_lable.pack(side="top", fill="x", padx=10, pady=10)
                 show_tasks()
 
-            def decomplete_task():
+            def incomplete_task():
                 tasks_to_decomplete = un_all_tasks.curselection()
                 index = tasks_to_decomplete[0]
                 task = todo.get_tasks()[index]
@@ -115,8 +115,8 @@ class GUI:
                     task.decomplete()
                     todo.update_task(task)
                 else:
-                    un_decomplete_lable = tk.Label(self.all_tasks_window, text="Task not found",font=("Times New Roman", 20),bg="Dimgrey", fg="White")
-                    un_decomplete_lable.pack(side="top", fill="x", padx=10, pady=10)
+                    un_incomplete_lable = tk.Label(self.all_tasks_window, text="Task not found",font=("Times New Roman", 20),bg="Dimgrey", fg="White")
+                    un_incomplete_lable.pack(side="top", fill="x", padx=10, pady=10)
                 show_tasks()
             def exit_window():
                 self.all_tasks_window.destroy()
@@ -126,8 +126,8 @@ class GUI:
             exit_button.pack(side="bottom", fill="x", padx=2, pady=1)
             dell_button = tk.Button(self.all_tasks_window, text="Delete", font=("Times New Roman", 20), bg="Dimgrey",fg="White", command=dell_task)
             dell_button.pack(side="bottom", fill="x", padx=2, pady=1)
-            decomplete_button = tk.Button(self.all_tasks_window, text="Mark as uncompleted", font=("Times New Roman", 20), bg="Dimgrey",fg="White", command=decomplete_task)
-            decomplete_button.pack(side="bottom", fill="x", padx=2, pady=1)
+            incomplete_button = tk.Button(self.all_tasks_window, text="Mark as Incomplete", font=("Times New Roman", 20), bg="Dimgrey",fg="White", command=incomplete_task)
+            incomplete_button.pack(side="bottom", fill="x", padx=2, pady=1)
             complete_button = tk.Button(self.all_tasks_window, text="Complete", font=("Times New Roman", 20), bg="Dimgrey",fg="White", command=complete_task)
             complete_button.pack(side="bottom", fill="x", padx=2, pady=1)
 
