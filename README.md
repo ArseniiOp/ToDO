@@ -4,6 +4,12 @@ A simple Python project created for educational purposes.
 
 This application allows users to manage tasks through a graphical user interface. Task data is stored in an SQLite database.
 
+![Main Window](images/preview1.png)
+
+![Task List](images/preview2.png)
+
+
+
 ## Features
 
 * Add tasks
